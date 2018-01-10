@@ -8,7 +8,6 @@
 
 
 
-
 @interface UIView (VViewRoutines)
 
 @property (nonatomic) CGPoint origin;
@@ -24,5 +23,14 @@
 
 
 -(void)fillWithView: (UIView*)view;
+
+@end
+
+
+
+@interface UIViewController (VViewRoutines)
+
+-(void)fillWithViewController: (UIViewController*)viewController;
+-(void)removeViewFromParentViewController;
 
 @end

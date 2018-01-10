@@ -4,4 +4,4 @@ UIView category that provides some useful additions to help manage view properti
 ### Abilities
 * get/set frame components: left, right, top, bottom, etc;
 * get/set corner radius;
-* fill view with another view using constraints.
+* manage view/view controller hierarchy (with autolayout).

@@ -8,7 +8,6 @@
 
 
 
-
 @implementation UIView (VViewRoutines)
 
 // MARK: - Frame
@@ -138,6 +137,25 @@
 }
 
 @end
+
+
+
+@implementation UIViewController (VViewRoutines)
+
+-(void)fillWithViewController:(UIViewController *)viewController
+{
+	[self addChildViewController:viewController];
+	[self.view fillWithView:viewController.view];
+}
+
+-(void)removeViewFromParentViewController
+{
+	[self.view removeFromSuperview];
+	[self removeFromParentViewController];
+}
+
+@end
+
 
 
 
