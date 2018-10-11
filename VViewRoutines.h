@@ -25,6 +25,7 @@
 
 
 -(void)fillWithView: (UIView*)view;
+-(void)centerInView: (UIView*)view;
 
 @end
 
