@@ -26,6 +26,7 @@
 
 -(void)fillWithView: (UIView*)view;
 -(void)centerInView: (UIView*)view;
+-(void)removeAllSubviews;
 
 @end
 

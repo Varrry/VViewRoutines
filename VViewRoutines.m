@@ -148,7 +148,7 @@
 
 
 
-// MARK: - Constraints
+// MARK: - Hierarchy
 
 -(void)fillWithView:(UIView*)view
 {
@@ -168,6 +168,12 @@
 	[view addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:view attribute:NSLayoutAttributeCenterY multiplier:1 constant:0]];
 	[view addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:self.width]];
 	[view addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:self.height]];
+}
+
+-(void)removeAllSubviews
+{
+	for (UIView *subview in [NSArray arrayWithArray:self.subviews])
+		[subview removeFromSuperview];
 }
 
 @end
